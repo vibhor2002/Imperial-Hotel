@@ -11,11 +11,11 @@
     
 }
 
-img{
+/* img{
     height: 73px;
     margin: 6px;
     width: 130px;
-}
+} */
 
 nav{
     flex:1;
@@ -50,21 +50,86 @@ nav ul li a:hover{
 .first-screen{
     display: block;
     text-align: center;
-    padding:10em 0;
-    background-image: url(img11.png), radial-gradient(#444,#111);  
     background-repeat:no-repeat;  
     background-size: 100%;
 }
+
+.slider{
+    position: relative;
+    width: 100%;
+}
+
+.myslider{
+    display: none;
+    height: 655px;
+    overflow: hidden;
+}
+
+#dotsbox{
+    text-align: center;
+}
+
+.prev, .next{
+    position: absolute ;
+    top: 50%;
+    color: white;
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.prev:hover, .next:hover{
+    color: #8c1450;
+}
+
+.next{
+    top: 50%;
+    right: 0;
+}
+
+.prev{
+    top: 50%;
+    left: 0;
+}
+
+.dotsbox{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 670px;
+    cursor: pointer;
+}
+ .dot{
+     display: inline-block;
+     width: 15px;
+     height: 15px;
+     border: 3px solid white;
+     border-radius: 50%;
+     margin: 0 10px;
+     cursor: pointer ;
+
+ }
+
+ .active, .dot:hover{
+    border-color: #8c1450;
+ }
+
 .btn{
     display:inline-block;
     text-decoration: none;
-    padding: 0.5em 1em;
+    padding: 0.4em 1em;
     border-radius: 0.5em;
     background: #3d0b24;
     text-transform: uppercase;
     color: white;
     font-size: 1.125em;
     cursor: pointer;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #3d0b24;
 }
 
 #scrolltotop{
@@ -88,7 +153,6 @@ nav ul li a:hover{
 
 .main-text{
     font-size:4em;
-
     color:white;
 }
 .first p{
@@ -97,10 +161,15 @@ nav ul li a:hover{
     padding: 19px;
 }
 
+.first{
+    position: absolute;
+    top: 19%;
+    left: 34%;
+}
+
 h1 {
     text-align: center;
-    color: #3d0b24;
-    height: 77px;
+    height: 91px;
     text-decoration: underline;
     font-size: 3rem;
     padding-top: 14px;
@@ -116,24 +185,44 @@ h2{
 
 form {
     display: inline-block;
+    justify-content: center;
     text-align: center;
     background-color: #eedde5;
-    padding-left: 35% ;
-    margin-top: -20px;
+    margin-top: -12px;
+    background-image: url("inquiry.png");
+    background-size: 630px;
+    background-repeat: no-repeat;
+    height: 419px;
+    width: 595px;
    }
    
+#inquiry{
+    background-color: #eedde5; 
+    height: 515px;
+}
+   
 form input {
-    padding: 1em;
+    position: relative;
+    left: 740px;
+    padding: 1.1em;
     border-radius:8px; 
     display: block;
-    width: 400px;
+    width: 450px;
     margin-top: 1em;
     font-family: 'Merriweather', sans-serif;
+    font-size: 16px;
 }  
 #input-submit {
     color: white; 
     background: #3d0b24;
+    position: relative;
+    width: 480px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
+#input-submit:hover{
+    background-color: #8c1450;
 }
 
 /*   */
@@ -179,12 +268,12 @@ form input {
 }
 .room-image img{
     transition: var(--transition);
-    width: 500px;
+    width: 550px;
     padding: 12px;
     margin: 24px;
 }
 .room-image:hover img{
-    transform: scale(1.12);
+    transform: scale(1.1);
 }
 
 @media (min-width: 900px){
@@ -238,9 +327,28 @@ footer{
     text-decoration: none;
 }
 
-#inquiry{
-    background-color: #eedde5; 
-    height: 400px;
+
+
+
+
+
+
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from {opacity: 0.8;}
+    to {opacity: 1;}
+}
+
+@keyframes fade{
+    from {opacity: 0.8;}
+    to {opacity: 1;}
 }
 
 

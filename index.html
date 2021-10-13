@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="script.js"></script> -->
-    <title>Imperial Hotels</title>
+    <title>Imperial Hotels - New Delhi</title>
+    <link rel="shortcut icon" href="logo.png">
 </head>
 
 <body>
@@ -35,11 +36,59 @@
         <i class="material-icons">arrow_upward</i>
     </button>
     <div class="first-screen">
+        <div class="slider">
+            <div class="myslider fade" style="display: block;">
+                <div class="first">
+                    <h1 class="main-text"> Imperial Hotels </h1>
+                    <p> For the comfort you were missing</p>
+                    <a href="#" class="btn">Book Now</a>   
+                </div>
+                <img src="img1.jpg" style="height: 100%; width: 100%; ">
+            </div>
+            <div class="myslider fade">
+                <div class="first">
+                    <h1 class="main-text"> Imperial Hotels </h1>
+                    <p> For the comfort you were missing</p>
+                    <a href="#" class="btn">Book Now</a>   
+                </div>
+                <img src="img2.jpeg" style="height: 100%; width: 100%;">
+            </div>
+            <div class="myslider fade">
+                <div class="first">
+                    <h1 class="main-text"> Imperial Hotels </h1>
+                    <p> For the comfort you were missing</p>
+                    <a href="#" class="btn">Book Now</a>   
+                </div>
+                <img src="img3.jpeg" style="height: 100%; width: 100%;">
+            </div>
+            <div class="myslider fade">
+                <div class="first">
+                    <h1 class="main-text"> Imperial Hotels </h1>
+                    <p> For the comfort you were missing</p>
+                    <a href="#" class="btn">Book Now</a>   
+                </div>
+                <img src="img4.jpeg" style="height: 100%; width: 100%;">
+            </div>
+            <div class="myslider fade">
+                <div class="first">
+                    <h1 class="main-text"> Imperial Hotels </h1>
+                    <p> For the comfort you were missing</p>
+                    <a href="#" class="btn">Book Now</a>   
+                </div>
+                <img src="img5.jpeg" style="height: 100%; width: 100%;">
+            </div>
+        </div>
+        <a class="prev" onclick="plusslide(-1)">&#10094</a>
+        <a class="next" onclick="plusslide(1)">&#10095</a>
 
-        <div class="first">
-            <h1 class="main-text"> Imperial Hotels </h1>
-            <p> For the comfort you were missing</p>
-            <a href="#" class="btn">Book Now</a>
+        <div class="dotsbox">
+            <span class="dot" onclick="currentslide(1)"></span>
+            <span class="dot" onclick="currentslide(2)"></span>
+            <span class="dot" onclick="currentslide(3)"></span>
+            <span class="dot" onclick="currentslide(4)"></span>
+            <span class="dot" onclick="currentslide(5)"></span>
+            <!-- <span class="dot"></span> -->
+            <!-- <span class="dot"></span> -->
         </div>
 
     </div>
@@ -141,7 +190,7 @@
     </section>
 
     <footer>
-        <p>© Copyrights 2021
+        <p>© Copyrights 2021 - All Rights Reserved
             <a id="foot-contact" href="mailto:email-id.com">Contact Us</a>
         </p>
     </footer>
@@ -157,6 +206,53 @@
             behavior: "smooth"
         });
     };
+
+    const myslide = document.querySelectorAll('.myslider');
+const dot = document.querySelectorAll('.dot');
+
+let counter = 1;
+slidefun(counter);
+
+let timer = setInterval(autoslide, 3000);
+function autoslide() {
+    counter += 1;
+    slidefun(counter);
+}
+
+function plusslide(n) {
+    counter += n;
+    slidefun(counter);
+    resetTimer();
+}
+
+function currentslide(n) {
+    counter = n;
+    slidefun(counter);
+    resetTimer();
+}
+
+function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(autoslide, 3000);
+}
+
+function slidefun(n) {
+    let i;
+    for (i = 0; i < myslide.length; i++) {
+        myslide[i].style.display = "none";
+    }
+    for (i = 0; i < dot.length; i++) {
+        dot[i].classList.remove('active');
+    }
+    if (n > myslide.length) {
+        counter = 1;
+    }
+    if (n < 1) {
+        counter = myslide.length;
+    }
+    myslide[counter - 1].style.display = 'block';
+    dot[counter - 1].classList.add= " active";
+}
 
 </script>
 
