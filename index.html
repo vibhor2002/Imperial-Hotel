@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="script.js"></script> -->
+    <title>Imperial Hotels</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" width="125px">
+            </div>
+
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Rooms</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Sign Up</a></li>
+                <li><a href="">Join</a></li>
+            </ul>
+
+
+    </nav>
+    </div>
+    <button id="scrolltotop">
+        <i class="material-icons">arrow_upward</i>
+    </button>
+    <div class="first-screen">
+
+        <div class="first">
+            <h1 class="main-text"> Imperial Hotels </h1>
+            <p> For the comfort you were missing</p>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+
+    </div>
+    <section>
+        <div id="inquiry">
+            <h1>Inquiry Form</h1>
+            <form class="form">
+
+                <input type="text" id="input-name" placeholder="Name">
+                <input type="email" id="input-email" placeholder="Email">
+                <input type="date" id="input-subject" placeholder="Booking Date">
+                <input type="text" id="input-roomtype" placeholder="Room Type and other details"></textarea>
+
+                <input type="submit" value="Submit" id="input-submit">
+            </form>
+        </div>
+    </section>
+
+    <section class="rooms sec-width" id="rooms">
+        <div class="rooms-container">
+            <h2>Rooms</h2>
+
+            <article class="room">
+                <div class="room-image">
+                    <img src="room1.jpeg" alt="room image">
+                </div>
+                <div class="room-text">
+                    <h3>Royal Premiere Room</h3>
+                    <ul>
+                        <li>> Lorem ipsum dolor.</li>
+                        <li>> Lorem ipsum dolor.</li>
+                        <li>> Lorem ipsum dolor.</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus
+                        maxime ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias
+                        sint tenetur incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse
+                        commodi nemo?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque,
+                        fugiat nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit
+                        eius labore, atque quo?</p>
+                    <p class="rate">
+                        <span>₹1.999.00 /</span> Per Night
+                    </p>
+                    <button type="button" class="btn">book now</button>
+                </div>
+            </article>
+
+            <article class="room">
+                <div class="room-image">
+                    <img src="room2.jpeg" alt="room image">
+                </div>
+                <div class="room-text">
+                    <h3>Premiere Room</h3>
+                    <ul>
+                        <li>> Lorem ipsum dolor.</li>
+                        <li>> Lorem ipsum dolor.</li>
+                        <li>> Lorem ipsum dolor.</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus
+                        maxime ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias
+                        sint tenetur incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse
+                        commodi nemo?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque,
+                        fugiat nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit
+                        eius labore, atque quo?</p>
+                    <p class="rate">
+                        <span>₹1,999.00 /</span> Per Night
+                    </p>
+                    <button type="button" class="btn">book now</button>
+                </div>
+            </article>
+
+            <article class="room">
+                <div class="room-image">
+                    <img src="room3.jpeg" alt="room image">
+                </div>
+                <div class="room-text">
+                    <h3>Royal Suite with Pool</h3>
+                    <ul>
+                        <li>> Lorem ipsum dolor.</li>
+                        <li>> Lorem ipsum dolor.</li>
+                        <li>> Lorem ipsum dolor.</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus
+                        maxime ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias
+                        sint tenetur incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse
+                        commodi nemo?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque,
+                        fugiat nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit
+                        eius labore, atque quo?</p>
+                    <p class="rate">
+                        <span>₹1,999.00 /</span> Per Night
+                    </p>
+                    <button type="button" class="btn">book now</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© Copyrights 2021
+            <a id="foot-contact" href="mailto:email-id.com">Contact Us</a>
+        </p>
+    </footer>
+
+</body>
+<script>
+    const el = document.getElementById('scrolltotop');
+    el.addEventListener("click", scrolltop);
+    function scrolltop() {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    };
+
+</script>
+
+</html>
